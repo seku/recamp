@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Recamp" %></title>
+    <title><%= content_for(:title) || "REC PARTS - Elevate your journey" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -19,10 +19,41 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%# FontAwesome icons %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="bg-light">
+    <!-- Header Navigation -->
+    <header class="bg-white border-bottom">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <!-- Left Navigation -->
+          <div class="navbar-nav me-auto">
+            <%= link_to "PRODUCTS", products_path, class: "nav-link fw-bold text-dark text-uppercase" %>
+            <%= link_to "FOR HARLEY", harley_path, class: "nav-link fw-bold text-dark text-uppercase ms-4" %>
+          </div>
+          
+          <!-- Center Logo -->
+          <div class="navbar-brand mx-auto">
+            <%= link_to root_path do %>
+              <%= image_tag "rec-parts-logo.svg", alt: "REC PARTS - Elevate your journey", class: "img-fluid", style: "height: 50px;" %>
+            <% end %>
+          </div>
+          
+          <!-- Right Navigation -->
+          <div class="navbar-nav ms-auto">
+            <%= link_to "SHOP", shop_path, class: "nav-link fw-bold text-dark text-uppercase me-4" %>
+            <%= link_to "CONTACT", contact_path, class: "nav-link fw-bold text-dark text-uppercase" %>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow-1">
+      <%= yield %>
+    </main>
   </body>
 </html>

@@ -1,4 +1,105 @@
-<h3>Recamp - startujemy</h3>
-<% @categories.each do |category| %>
-  <%= category %>
-<% end %>
+<% content_for(:title, "Products Categories - REC PARTS") %>
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="display-5 fw-bold text-dark mb-5">Products categories</h1>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <% @categories.each do |category| %>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <%= link_to category_path(name: category.name), class: "text-decoration-none" do %>
+          <div class="card h-100 shadow-sm border-0 category-card">
+            <div class="card-body text-center p-4">
+              <!-- Category Image Placeholder -->
+              <div class="category-image-container mb-3">
+                <div class="category-image-placeholder bg-light d-flex align-items-center justify-content-center">
+                  <% case category.name %>
+                  <% when "LED Headlights" %>
+                    <i class="fas fa-lightbulb fa-3x text-warning"></i>
+                  <% when "Mirrors" %>
+                    <i class="fas fa-search fa-3x text-info"></i>
+                  <% when "Footpegs" %>
+                    <i class="fas fa-shoe-prints fa-3x text-success"></i>
+                  <% when "For Harley (parts and accessories)" %>
+                    <i class="fas fa-motorcycle fa-3x text-danger"></i>
+                  <% when "CNC Levers" %>
+                    <i class="fas fa-tools fa-3x text-primary"></i>
+                  <% when "Upper Stay Brackets" %>
+                    <i class="fas fa-wrench fa-3x text-secondary"></i>
+                  <% when "Engine Starters" %>
+                    <i class="fas fa-power-off fa-3x text-success"></i>
+                  <% when "Windscreens and Wind Protectors" %>
+                    <i class="fas fa-shield-alt fa-3x text-info"></i>
+                  <% when "Engine Covers" %>
+                    <i class="fas fa-cogs fa-3x text-dark"></i>
+                  <% else %>
+                    <i class="fas fa-cog fa-3x text-muted"></i>
+                  <% end %>
+                </div>
+              </div>
+              
+              <!-- Category Name -->
+              <div class="category-name-container">
+                <h5 class="card-title fw-bold text-uppercase text-dark mb-2">
+                  <%= category.name %>
+                </h5>
+                <div class="category-arrow">
+                  <i class="fas fa-arrow-right text-primary"></i>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Red bottom border -->
+            <div class="category-border"></div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<style>
+.category-card {
+  transition: transform 0.2s ease-in-out;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+}
+
+.category-image-placeholder {
+  height: 200px;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+}
+
+.category-name-container {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.category-border {
+  height: 3px;
+  background: linear-gradient(90deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.category-arrow {
+  margin-top: 10px;
+}
+
+.card-title {
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  min-height: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>

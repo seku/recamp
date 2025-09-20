@@ -1,0 +1,29 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .logo-text { 
+        font-family: Arial, sans-serif; 
+        font-weight: bold; 
+        fill: #333;
+      }
+      .tagline { 
+        font-family: Arial, sans-serif; 
+        font-size: 10px; 
+        fill: #e74c3c; 
+        font-style: italic;
+      }
+      .triangle { 
+        fill: #e74c3c; 
+      }
+    </style>
+  </defs>
+  
+  <!-- Red triangle/arrow -->
+  <polygon class="triangle" points="10,15 25,30 10,45" />
+  
+  <!-- Main logo text -->
+  <text x="35" y="35" class="logo-text" font-size="24">REC PARTS</text>
+  
+  <!-- Tagline -->
+  <text x="35" y="50" class="tagline">Elevate your journey</text>
+</svg>
