@@ -1,0 +1,50 @@
+{
+  "Kategorie": {
+    "LED Headlights": {
+      "For Harley and Cars (7 inch)": null,
+      "For Lorries": null,
+      "Side Lights for Motorcycles (4,5 inch)": null,
+      "Fog Lights for Cars": null,
+      "Back Lights for Motorcycles": null
+    },
+    "Mirrors": {
+      "Universal (M8/M10 Bolt Mount)": null,
+      "Universal (Bar-End Mount 1\" & 7/8\")": {
+        "For Harley (H-D Mount)": null,
+        "Mirror Fairing Adapters": null,
+        "Bar-End Mirror Adapters": null
+      }
+    },
+    "Footpegs": {
+      "Highway Footpegs": null,
+      "Rider and Passenger Footpegs": null,
+      "Highway Footpeg Clamps": null
+    },
+    "For Harley (parts and accessories)": {
+      "Footpegs & Floorboards": null,
+      "Footpeg Mounts & Brackets": null,
+      "Foot Control Relocation Kits": null,
+      "Shift & Brake Levers + Accessories": null,
+      "Windscreens": null,
+      "Fairings, Consoles + Accessories": null,
+      "Saddlebags, Racks & Accessories": null
+    },
+    "CNC Levers": {
+      "Classic Short": null,
+      "Classic Long": null,
+      "Foldable & Extendable": null,
+      "5D Short": null,
+      "5D Long": null,
+      "Cobra Short": null
+    },
+    "Upper Stay Brackets": null,
+    "Engine Starters": null,
+    "Windscreens and Wind Protectors": {
+      "Precision-Fit (Model-Specific)": null,
+      "Universal Mount (Headlight/Handlebar)": null,
+      "For Harley": null,
+      "Hand Wind Protectors (Handguards)": null
+    },
+    "Engine Covers": null
+  }
+}
