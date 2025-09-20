@@ -27,9 +27,9 @@
   </div>
 
   <% if @subcategories.any? %>
-    <div class="row g-4">
+    <div class="categories-flex-container">
       <% @subcategories.each do |subcategory| %>
-        <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="category-flex-item">
           <%= link_to category_path(name: subcategory.name), class: "text-decoration-none" do %>
             <div class="card h-100 shadow-sm border-0 category-card">
               <div class="card-body text-center p-4">
@@ -72,51 +72,3 @@
   <% end %>
 </div>
 
-<style>
-.category-card {
-  transition: transform 0.2s ease-in-out;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.category-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
-}
-
-.category-image-placeholder {
-  height: 200px;
-  border-radius: 6px;
-  background-color: #f8f9fa;
-}
-
-.category-name-container {
-  border-top: 1px solid #eee;
-  padding-top: 15px;
-}
-
-.category-border {
-  height: 3px;
-  background: linear-gradient(90deg, #e74c3c 0%, #c0392b 100%);
-}
-
-.category-arrow {
-  margin-top: 10px;
-}
-
-.card-title {
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
-  line-height: 1.3;
-  min-height: 2.6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.breadcrumb-item + .breadcrumb-item::before {
-  content: "›";
-  color: #6c757d;
-  font-weight: bold;
-}
-</style>
