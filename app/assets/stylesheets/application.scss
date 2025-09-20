@@ -166,38 +166,37 @@ main {
 body::before {
   content: "UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • ";
   position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  font-size: 2rem;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.04);
-  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 300%;
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.08);
+  z-index: -10;
   pointer-events: none;
-  line-height: 4;
-  word-spacing: 1rem;
-  transform: rotate(-25deg);
+  line-height: 3;
+  word-spacing: 2rem;
+  transform: rotate(-45deg) translate(-50%, -50%);
   white-space: nowrap;
   overflow: hidden;
 }
 
-/* Second layer for crosshatch pattern */
 body::after {
   content: "• UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION • UNDER CONSTRUCTION";
   position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  font-size: 1.8rem;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.03);
-  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 300%;
+  font-size: 1.3rem;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.06);
+  z-index: -10;
   pointer-events: none;
-  line-height: 5;
-  word-spacing: 1.5rem;
-  transform: rotate(25deg);
+  line-height: 4;
+  word-spacing: 2.5rem;
+  transform: rotate(45deg) translate(-30%, -30%);
   white-space: nowrap;
   overflow: hidden;
 }
