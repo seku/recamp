@@ -62,11 +62,15 @@
 
 /* Header Styles */
 .navbar {
-  padding: 1rem 0;
+  padding: 0;
+  background-color: #e8e8e8 !important;
+  height: 60px;
 }
 
 .navbar-brand {
   flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
 }
 
 /* Responsive Header Layout */
