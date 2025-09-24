@@ -3,7 +3,7 @@
 <div class="container py-5">
   <div class="row">
     <div class="col-12">
-      <h1 class="display-5 fw-bold text-dark mb-5">Products categories</h1>
+      <h1 class="display-6 fw-bold text-dark mb-5">Products categories</h1>
     </div>
   </div>
 
@@ -40,18 +40,16 @@
                   <% end %>
                 </div>
               </div>
-              
+
               <!-- Category Name -->
               <div class="category-name-container">
-                <h5 class="card-title fw-bold text-uppercase text-dark mb-2">
+                <h5 class="card-title text-uppercase text-dark mb-0">
                   <%= category.name %>
+                  <i class="fas fa-arrow-right text-dark ms-2"></i>
                 </h5>
-                <div class="category-arrow">
-                  <i class="fas fa-arrow-right text-dark"></i>
-                </div>
               </div>
             </div>
-            
+
             <!-- Red bottom border -->
             <div class="category-border"></div>
           </div>
@@ -60,4 +58,3 @@
     <% end %>
   </div>
 </div>
-

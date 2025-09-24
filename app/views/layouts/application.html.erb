@@ -79,23 +79,23 @@
         <div class="container d-flex align-items-center justify-content-between">
           <!-- Left Navigation -->
           <div class="navbar-nav me-auto d-none d-md-flex">
-            <%= link_to "PRODUCTS", products_path, class: "nav-link fw-bold text-dark text-uppercase" %>
-            <%= link_to "FOR HARLEY", harley_path, class: "nav-link fw-bold text-dark text-uppercase ms-4" %>
+            <%= link_to "PRODUCTS", products_path, class: "nav-link text-dark text-uppercase" %>
+            <%= link_to "FOR HARLEY", harley_path, class: "nav-link text-dark text-uppercase ms-4" %>
           </div>
-          
+
           <!-- Center Logo -->
           <div class="navbar-brand mx-auto">
             <%= link_to root_path do %>
               <%= image_tag "rec-parts-logo.png", alt: "REC PARTS - Elevate your journey", class: "img-fluid", style: "height: 60px;" %>
             <% end %>
           </div>
-          
+
           <!-- Right Navigation -->
           <div class="navbar-nav ms-auto d-none d-md-flex">
-            <%= link_to "SHOP", shop_path, class: "nav-link fw-bold text-dark text-uppercase me-4" %>
-            <%= link_to "CONTACT", contact_path, class: "nav-link fw-bold text-dark text-uppercase" %>
+            <%= link_to "SHOP", shop_path, class: "nav-link text-dark text-uppercase me-4" %>
+            <%= link_to "CONTACT", contact_path, class: "nav-link text-dark text-uppercase" %>
           </div>
-          
+
           <!-- Mobile Navigation -->
           <div class="d-md-none w-100">
             <div class="d-flex justify-content-center mt-2 gap-3">
@@ -110,7 +110,7 @@
     </header>
 
 
-    
+
     <!-- Main Content -->
     <main class="flex-grow-1 py-3">
       <%= yield %>
