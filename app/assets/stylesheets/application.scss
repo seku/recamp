@@ -34,7 +34,6 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, select {
 }
 
 .category-card:hover {
-  transform: translateY(-5px);
 }
 
 .category-name-container::after {
@@ -215,9 +214,8 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, select {
 
 .btn-shop-now:hover {
   background-color: white;
-  color: #e74c3c;
+  color: black;
   border-color: white;
-  transform: translateY(-2px);
 }
 
 /* Responsive adjustments for hero section */
@@ -404,10 +402,8 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, select {
 }
 
 .btn-subcategory-shop:hover {
-  background-color: #c0392b;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+  background-color: white;
+  color: black;
 }
 
 .subcategory-image {
