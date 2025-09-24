@@ -24,16 +24,16 @@
 <!-- Section 2: Flex Grid Content Section -->
 <section class="category-content-section py-5">
   <div class="container">
-    <div class="content-grid">
+    <div class="content-grid" data-controller="content-toggle">
       
       <!-- Content Item 1 -->
-      <div class="content-item">
+      <div class="content-item" data-content-toggle-target="item">
         <h4 class="content-title">Lorem Ipsum Dolor Sit</h4>
-        <div class="content-toggle" data-target="content1">
+        <div class="content-toggle" data-action="click->content-toggle#toggle">
           <span class="plus-icon">+</span>
         </div>
         <div class="red-line"></div>
-        <div class="collapse" id="content1">
+        <div class="collapse">
           <div class="content-expanded">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
           </div>
@@ -41,13 +41,13 @@
       </div>
 
       <!-- Content Item 2 -->
-      <div class="content-item">
+      <div class="content-item" data-content-toggle-target="item">
         <h4 class="content-title">Consectetur Adipiscing Elite</h4>
-        <div class="content-toggle" data-target="content2">
+        <div class="content-toggle" data-action="click->content-toggle#toggle">
           <span class="plus-icon">+</span>
         </div>
         <div class="red-line"></div>
-        <div class="collapse" id="content2">
+        <div class="collapse">
           <div class="content-expanded">
             <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
           </div>
@@ -55,13 +55,13 @@
       </div>
 
       <!-- Content Item 3 -->
-      <div class="content-item">
+      <div class="content-item" data-content-toggle-target="item">
         <h4 class="content-title">Sed Do Eiusmod Tempor</h4>
-        <div class="content-toggle" data-target="content3">
+        <div class="content-toggle" data-action="click->content-toggle#toggle">
           <span class="plus-icon">+</span>
         </div>
         <div class="red-line"></div>
-        <div class="collapse" id="content3">
+        <div class="collapse">
           <div class="content-expanded">
             <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis.</p>
           </div>
@@ -69,13 +69,13 @@
       </div>
 
       <!-- Content Item 4 -->
-      <div class="content-item">
+      <div class="content-item" data-content-toggle-target="item">
         <h4 class="content-title">Ut Labore Et Dolore</h4>
-        <div class="content-toggle" data-target="content4">
+        <div class="content-toggle" data-action="click->content-toggle#toggle">
           <span class="plus-icon">+</span>
         </div>
         <div class="red-line"></div>
-        <div class="collapse" id="content4">
+        <div class="collapse">
           <div class="content-expanded">
             <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
           </div>
@@ -83,13 +83,13 @@
       </div>
 
       <!-- Content Item 5 -->
-      <div class="content-item">
+      <div class="content-item" data-content-toggle-target="item">
         <h4 class="content-title">Magna Aliqua Veniam</h4>
-        <div class="content-toggle" data-target="content5">
+        <div class="content-toggle" data-action="click->content-toggle#toggle">
           <span class="plus-icon">+</span>
         </div>
         <div class="red-line"></div>
-        <div class="collapse" id="content5">
+        <div class="collapse">
           <div class="content-expanded">
             <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
           </div>
@@ -97,13 +97,13 @@
       </div>
 
       <!-- Content Item 6 -->
-      <div class="content-item">
+      <div class="content-item" data-content-toggle-target="item">
         <h4 class="content-title">Exercitation Ullamco Laboris</h4>
-        <div class="content-toggle" data-target="content6">
+        <div class="content-toggle" data-action="click->content-toggle#toggle">
           <span class="plus-icon">+</span>
         </div>
         <div class="red-line"></div>
-        <div class="collapse" id="content6">
+        <div class="collapse">
           <div class="content-expanded">
             <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
           </div>
@@ -111,13 +111,13 @@
       </div>
 
       <!-- Content Item 7 -->
-      <div class="content-item">
+      <div class="content-item" data-content-toggle-target="item">
         <h4 class="content-title">Voluptate Esse Cillum</h4>
-        <div class="content-toggle" data-target="content7">
+        <div class="content-toggle" data-action="click->content-toggle#toggle">
           <span class="plus-icon">+</span>
         </div>
         <div class="red-line"></div>
-        <div class="collapse" id="content7">
+        <div class="collapse">
           <div class="content-expanded">
             <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum et dolorum fuga.</p>
           </div>
@@ -125,13 +125,13 @@
       </div>
 
       <!-- Content Item 8 -->
-      <div class="content-item">
+      <div class="content-item" data-content-toggle-target="item">
         <h4 class="content-title">Commodo Consequat Duis</h4>
-        <div class="content-toggle" data-target="content8">
+        <div class="content-toggle" data-action="click->content-toggle#toggle">
           <span class="plus-icon">+</span>
         </div>
         <div class="red-line"></div>
-        <div class="collapse" id="content8">
+        <div class="collapse">
           <div class="content-expanded">
             <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur tempor incididunt ut labore.</p>
           </div>
