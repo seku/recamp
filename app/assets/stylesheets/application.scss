@@ -9,13 +9,26 @@
  * Consider organizing styles into separate files for maintainability.
  */
 
+/* Inter Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 /* Bootstrap CSS Framework */
 @import "bootstrap";
+
+/* Set Inter as default font family */
+body, html {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Apply Inter to all text elements */
+h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, select {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
 
 /* Category Cards Styles */
 .category-card {
   transition: transform 0.2s ease-in-out;
-  border-radius: 8px;
+  border-radius: 0;
   overflow: hidden;
   position: relative;
 }
@@ -56,7 +69,7 @@
   color: white !important;
 }
 
-.category-card:hover .category-arrow i {
+.category-card:hover .fas.fa-arrow-right {
   color: white !important;
 }
 
@@ -66,12 +79,12 @@
 
 .category-image-placeholder {
   height: 200px;
-  border-radius: 6px;
+  border-radius: 0;
   background-color: #f8f9fa;
 }
 
 .category-name-container {
-  padding-top: 15px;
+  padding-top: 9px;
   transition: all 0.3s ease-in-out;
   position: relative;
   overflow: visible;
@@ -91,9 +104,7 @@
   display: none;
 }
 
-.category-arrow {
-  margin-top: 10px;
-}
+
 
 .card-title {
   font-size: 0.9rem;
@@ -103,6 +114,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.card-body {
+  padding-bottom: 0.5rem !important;
+}
+
+/* Navigation Links Font Size */
+.navbar .nav-link {
+  font-size: 16px !important;
+  line-height: 1 !important;
+  height: auto !important;
+}
+
+.navbar-nav .nav-link {
+  font-size: 16px !important;
+  line-height: 1 !important;
+  height: auto !important;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
