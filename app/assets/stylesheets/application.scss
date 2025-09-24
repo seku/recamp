@@ -132,15 +132,17 @@ main {
 }
 
 .category-flex-item {
-  flex: 1 1 300px; /* Grow, shrink, min-width */
+  flex: 1 1 200px; /* Grow, shrink, smaller min-width for 4 columns */
   max-width: calc(25% - 1.125rem); /* 4 columns on desktop with gap */
-  min-width: 280px;
+  min-width: 200px;
 }
 
 /* Responsive breakpoints */
-@media (max-width: 1200px) {
+@media (max-width: 800px) {
   .category-flex-item {
+    flex: 1 1 250px;
     max-width: calc(33.333% - 1rem); /* 3 columns on large tablets */
+    min-width: 250px;
   }
 }
 
