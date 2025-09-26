@@ -13,30 +13,21 @@
         <%= link_to category_path(name: category.name), class: "text-decoration-none" do %>
           <div class="card h-100 shadow-sm border-0 category-card">
             <div class="card-body text-center p-4">
-              <!-- Category Image Placeholder -->
+              <!-- Category Image -->
               <div class="category-image-container mb-3">
-                <div class="category-image-placeholder bg-light d-flex align-items-center justify-content-center">
-                  <% case category.name %>
-                  <% when "LED Headlights" %>
-                    <i class="fas fa-lightbulb fa-3x text-warning"></i>
-                  <% when "Mirrors" %>
-                    <i class="fas fa-search fa-3x text-info"></i>
-                  <% when "Footpegs" %>
-                    <i class="fas fa-shoe-prints fa-3x text-success"></i>
-                  <% when "For Harley (parts and accessories)" %>
-                    <i class="fas fa-motorcycle fa-3x text-danger"></i>
-                  <% when "CNC Levers" %>
-                    <i class="fas fa-tools fa-3x text-primary"></i>
-                  <% when "Upper Stay Brackets" %>
-                    <i class="fas fa-wrench fa-3x text-secondary"></i>
-                  <% when "Engine Starters" %>
-                    <i class="fas fa-power-off fa-3x text-success"></i>
-                  <% when "Windscreens and Wind Protectors" %>
-                    <i class="fas fa-shield-alt fa-3x text-info"></i>
-                  <% when "Engine Covers" %>
-                    <i class="fas fa-cogs fa-3x text-dark"></i>
+                <div class="category-image-wrapper">
+                  <% if category.identifier.present? %>
+                    <%= image_tag category.home_image_path, 
+                        alt: category.name,
+                        class: "category-image img-fluid",
+                        onerror: "this.style.display='none'; this.nextElementSibling.style.display='flex';" %>
+                    <div class="category-image-fallback bg-light d-flex align-items-center justify-content-center" style="display: none;">
+                      <i class="fas fa-image fa-3x text-muted"></i>
+                    </div>
                   <% else %>
-                    <i class="fas fa-cog fa-3x text-muted"></i>
+                    <div class="category-image-placeholder bg-light d-flex align-items-center justify-content-center">
+                      <i class="fas fa-cog fa-3x text-muted"></i>
+                    </div>
                   <% end %>
                 </div>
               </div>

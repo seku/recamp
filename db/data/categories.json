@@ -1,50 +1,244 @@
 {
-  "Kategorie": {
-    "LED Headlights": {
-      "For Harley and Cars (7 inch)": null,
-      "For Lorries": null,
-      "Side Lights for Motorcycles (4,5 inch)": null,
-      "Fog Lights for Cars": null,
-      "Back Lights for Motorcycles": null
+  "categories": [
+    {
+      "name": "CNC Levers",
+      "identifier": "cnc_levers",
+      "benefits": [
+        {
+          "title": "High Precision Manufacturing",
+          "desc": "CNC machined from premium aluminum for perfect fit and durability"
+        },
+        {
+          "title": "Enhanced Control",
+          "desc": "Improved grip and lever feel for better riding experience"
+        }
+      ],
+      "subcategories": [
+        {
+          "name": "Classic Short",
+          "position": "1",
+          "desc": "Compact design for sport riding and precise control"
+        },
+        {
+          "name": "Classic Long",
+          "position": "2",
+          "desc": "Extended reach for comfortable cruising position"
+        },
+        {
+          "name": "Foldable & Extendable",
+          "position": "3",
+          "desc": "Adjustable levers with crash protection folding mechanism"
+        },
+        {
+          "name": "5D Short",
+          "position": "4",
+          "desc": "Modern 5-dimensional design for aggressive styling"
+        },
+        {
+          "name": "5D Long",
+          "position": "5",
+          "desc": "Extended 5D levers for touring comfort"
+        },
+        {
+          "name": "Cobra Short",
+          "position": "6",
+          "desc": "Unique cobra-inspired design for distinctive appearance"
+        }
+      ]
     },
-    "Mirrors": {
-      "Universal (M8/M10 Bolt Mount)": null,
-      "Universal (Bar-End Mount 1\" & 7/8\")": {
-        "For Harley (H-D Mount)": null,
-        "Mirror Fairing Adapters": null,
-        "Bar-End Mirror Adapters": null
-      }
+    {
+      "name": "Engine Covers",
+      "identifier": "engine_covers",
+      "benefits": [
+        {
+          "title": "Engine Protection",
+          "desc": "Superior protection against debris and impact damage"
+        },
+        {
+          "title": "Enhanced Aesthetics",
+          "desc": "Stylish covers that improve your bike's visual appeal"
+        }
+      ],
+      "subcategories": []
     },
-    "Footpegs": {
-      "Highway Footpegs": null,
-      "Rider and Passenger Footpegs": null,
-      "Highway Footpeg Clamps": null
+    {
+      "name": "Engine Starters",
+      "identifier": "engine_starters",
+      "benefits": [
+        {
+          "title": "Reliable Starting",
+          "desc": "High-performance starters for consistent engine ignition"
+        },
+        {
+          "title": "Premium Quality",
+          "desc": "Built to withstand harsh conditions and frequent use"
+        }
+      ],
+      "subcategories": []
     },
-    "For Harley (parts and accessories)": {
-      "Footpegs & Floorboards": null,
-      "Footpeg Mounts & Brackets": null,
-      "Foot Control Relocation Kits": null,
-      "Shift & Brake Levers + Accessories": null,
-      "Windscreens": null,
-      "Fairings, Consoles + Accessories": null,
-      "Saddlebags, Racks & Accessories": null
+    {
+      "name": "Footpegs",
+      "identifier": "footpegs",
+      "benefits": [
+        {
+          "title": "Superior Grip",
+          "desc": "Anti-slip surface design for maximum foot stability"
+        },
+        {
+          "title": "Comfort Enhancement",
+          "desc": "Ergonomic design reduces rider fatigue on long rides"
+        }
+      ],
+      "subcategories": [
+        {
+          "name": "Highway Footpegs",
+          "position": "1",
+          "desc": "Extended footpegs for relaxed highway cruising position"
+        },
+        {
+          "name": "Rider and Passenger Footpegs",
+          "position": "2",
+          "desc": "Complete footpeg sets for both rider and passenger comfort"
+        },
+        {
+          "name": "Highway Footpeg Clamps",
+          "position": "3",
+          "desc": "Mounting hardware and clamps for highway footpeg installation"
+        }
+      ]
     },
-    "CNC Levers": {
-      "Classic Short": null,
-      "Classic Long": null,
-      "Foldable & Extendable": null,
-      "5D Short": null,
-      "5D Long": null,
-      "Cobra Short": null
+    {
+      "name": "LED Headlights",
+      "identifier": "led_headlights",
+      "benefits": [
+        {
+          "title": "High Precision Lighting",
+          "desc": "Advanced LED technology for superior road illumination"
+        },
+        {
+          "title": "Energy Efficiency",
+          "desc": "Low power consumption with maximum brightness output"
+        }
+      ],
+      "subcategories": [
+        {
+          "name": "For Harley and Cars (7 inch)",
+          "position": "1",
+          "desc": "7-inch LED headlights compatible with Harley Davidson and classic cars"
+        },
+        {
+          "name": "For Lorries",
+          "position": "2",
+          "desc": "Heavy-duty LED headlights designed for commercial vehicles"
+        },
+        {
+          "name": "Side Lights for Motorcycles (4,5 inch)",
+          "position": "3",
+          "desc": "Compact 4.5-inch side mounted LED lights for motorcycles"
+        },
+        {
+          "name": "Fog Lights for Cars",
+          "position": "4",
+          "desc": "Specialized fog lights for improved visibility in adverse weather"
+        },
+        {
+          "name": "Back Lights for Motorcycles",
+          "position": "5",
+          "desc": "High-visibility LED tail lights for enhanced safety"
+        }
+      ]
     },
-    "Upper Stay Brackets": null,
-    "Engine Starters": null,
-    "Windscreens and Wind Protectors": {
-      "Precision-Fit (Model-Specific)": null,
-      "Universal Mount (Headlight/Handlebar)": null,
-      "For Harley": null,
-      "Hand Wind Protectors (Handguards)": null
+    {
+      "name": "Mirrors",
+      "identifier": "mirrors",
+      "benefits": [
+        {
+          "title": "Crystal Clear Vision",
+          "desc": "High-quality glass with anti-glare coating for optimal visibility"
+        },
+        {
+          "title": "Aerodynamic Design",
+          "desc": "Wind-optimized shape reduces buffeting and noise"
+        }
+      ],
+      "subcategories": [
+        {
+          "name": "Universal (M8/M10 Bolt Mount)",
+          "position": "1",
+          "desc": "Standard bolt-on mirrors with M8/M10 threading for universal fit"
+        },
+        {
+          "name": "Universal (Bar-End Mount 1\" & 7/8\")",
+          "position": "2",
+          "desc": "Bar-end mirrors for 1-inch and 7/8-inch handlebars"
+        },
+        {
+          "name": "For Harley (H-D Mount)",
+          "position": "3",
+          "desc": "Harley Davidson specific mounting system mirrors"
+        },
+        {
+          "name": "Mirror Fairing Adapters",
+          "position": "4",
+          "desc": "Mounting adapters for installing mirrors on fairings"
+        },
+        {
+          "name": "Bar-End Mirror Adapters",
+          "position": "5",
+          "desc": "Conversion adapters for bar-end mirror installation"
+        }
+      ]
     },
-    "Engine Covers": null
-  }
+    {
+      "name": "Upper Stay Brackets",
+      "identifier": "upper_stay_brackets",
+      "benefits": [
+        {
+          "title": "Structural Reinforcement",
+          "desc": "Added stability and support for motorcycle frame components"
+        },
+        {
+          "title": "Precision Fit",
+          "desc": "Engineered for exact fitment and optimal load distribution"
+        }
+      ],
+      "subcategories": []
+    },
+    {
+      "name": "Wind Protections",
+      "identifier": "wind_protections",
+      "benefits": [
+        {
+          "title": "Wind Deflection",
+          "desc": "Effective protection from wind fatigue and weather elements"
+        },
+        {
+          "title": "Improved Aerodynamics",
+          "desc": "Streamlined design enhances bike performance and comfort"
+        }
+      ],
+      "subcategories": [
+        {
+          "name": "Precision-Fit (Model-Specific)",
+          "position": "1",
+          "desc": "Custom-designed windscreens for specific motorcycle models"
+        },
+        {
+          "name": "Universal Mount (Headlight/Handlebar)",
+          "position": "2",
+          "desc": "Universal windscreens with flexible mounting options"
+        },
+        {
+          "name": "For Harley",
+          "position": "3",
+          "desc": "Harley Davidson specific windscreen solutions"
+        },
+        {
+          "name": "Hand Wind Protectors (Handguards)",
+          "position": "4",
+          "desc": "Hand guards for protection from wind and debris"
+        }
+      ]
+    }
+  ]
 }
