@@ -1,113 +1,6 @@
 {
   "categories": [
     {
-      "name": "CNC Levers",
-      "identifier": "cnc_levers",
-      "benefits": [
-        {
-          "title": "High Precision Manufacturing",
-          "desc": "CNC machined from premium aluminum for perfect fit and durability"
-        },
-        {
-          "title": "Enhanced Control",
-          "desc": "Improved grip and lever feel for better riding experience"
-        }
-      ],
-      "subcategories": [
-        {
-          "name": "Classic Short",
-          "position": "1",
-          "desc": "Compact design for sport riding and precise control"
-        },
-        {
-          "name": "Classic Long",
-          "position": "2",
-          "desc": "Extended reach for comfortable cruising position"
-        },
-        {
-          "name": "Foldable & Extendable",
-          "position": "3",
-          "desc": "Adjustable levers with crash protection folding mechanism"
-        },
-        {
-          "name": "5D Short",
-          "position": "4",
-          "desc": "Modern 5-dimensional design for aggressive styling"
-        },
-        {
-          "name": "5D Long",
-          "position": "5",
-          "desc": "Extended 5D levers for touring comfort"
-        },
-        {
-          "name": "Cobra Short",
-          "position": "6",
-          "desc": "Unique cobra-inspired design for distinctive appearance"
-        }
-      ]
-    },
-    {
-      "name": "Engine Covers",
-      "identifier": "engine_covers",
-      "benefits": [
-        {
-          "title": "Engine Protection",
-          "desc": "Superior protection against debris and impact damage"
-        },
-        {
-          "title": "Enhanced Aesthetics",
-          "desc": "Stylish covers that improve your bike's visual appeal"
-        }
-      ],
-      "subcategories": []
-    },
-    {
-      "name": "Engine Starters",
-      "identifier": "engine_starters",
-      "benefits": [
-        {
-          "title": "Reliable Starting",
-          "desc": "High-performance starters for consistent engine ignition"
-        },
-        {
-          "title": "Premium Quality",
-          "desc": "Built to withstand harsh conditions and frequent use"
-        }
-      ],
-      "subcategories": []
-    },
-    {
-      "name": "Footpegs",
-      "identifier": "footpegs",
-      "benefits": [
-        {
-          "title": "Superior Grip",
-          "desc": "Anti-slip surface design for maximum foot stability"
-        },
-        {
-          "title": "Comfort Enhancement",
-          "desc": "Ergonomic design reduces rider fatigue on long rides"
-        }
-      ],
-      "subcategories": [
-        {
-          "name": "Highway Footpegs",
-          "position": "1",
-          "desc": "Extended footpegs for relaxed highway cruising position"
-        },
-        {
-          "name": "Rider and Passenger Footpegs",
-          "position": "2",
-          "desc": "Complete footpeg sets for both rider and passenger comfort"
-        },
-        {
-          "name": "Highway Footpeg Clamps",
-          "position": "3",
-          "desc": "Mounting hardware and clamps for highway footpeg installation"
-        }
-      ]
-    },
-    {
       "name": "LED Headlights",
       "identifier": "led_headlights",
       "benefits": [
@@ -153,39 +46,172 @@
       "identifier": "mirrors",
       "benefits": [
         {
-          "title": "Crystal Clear Vision",
-          "desc": "High-quality glass with anti-glare coating for optimal visibility"
+          "title": "High grade Material",
+          "desc": "Entire mirrors, stems, and mounts are made of high-strength aluminum, with some models also using steel or stainless steel."
         },
         {
-          "title": "Aerodynamic Design",
-          "desc": "Wind-optimized shape reduces buffeting and noise"
+          "title": "New Technology",
+          "desc": "Depending on the model, mirrors are either fully CNC-manufactured or made using advanced high-pressure die-casting."
+        },
+        {
+          "title": "Expanded Field of Vision",
+          "desc": "Slightly curved mirror expands the field of view for better visibility while providing a clear, distortion-free reflection for enhanced safety and riding comfort"
+        },
+        {
+          "title": "Precision Engineering",
+          "desc": "Carefully designed and precisely finished for exceptional functionality and aesthetics."
+        },
+        {
+          "title": "Durable Surface Finishes",
+          "desc": "Available in high-quality chrome, anodized, and black finishes—resistant to fading, corrosion, and wear for long-lasting appearance and durability."
+        },
+        {
+          "title": "Mirror Adjustment",
+          "desc": "Precise adjustment ensures safety and a stable mirror position, even in strong winds."
         }
       ],
       "subcategories": [
         {
           "name": "Universal (M8/M10 Bolt Mount)",
           "position": "1",
-          "desc": "Standard bolt-on mirrors with M8/M10 threading for universal fit"
+          "desc": "Fits most motorcycles and mounts to the handlebar with standard M8/M10 bolts, supporting both clockwise and counterclockwise threaded screws."
         },
         {
           "name": "Universal (Bar-End Mount 1\" & 7/8\")",
           "position": "2",
-          "desc": "Bar-end mirrors for 1-inch and 7/8-inch handlebars"
+          "desc": "Fits most motorcycles with 22mm (7/8\") and 25.4mm (1\") round handlebars, with the option to mount directly on the handlebar or bar ends."
         },
         {
           "name": "For Harley (H-D Mount)",
           "position": "3",
-          "desc": "Harley Davidson specific mounting system mirrors"
+          "desc": "Fits most Harley-Davidson models from 1982–2024 with standard long M8 bolts."
         },
         {
           "name": "Mirror Fairing Adapters",
           "position": "4",
-          "desc": "Mounting adapters for installing mirrors on fairings"
+          "desc": "Adapters for installing aftermarket mirrors on stock fairing mounts of sport motorcycles."
         },
         {
           "name": "Bar-End Mirror Adapters",
           "position": "5",
-          "desc": "Conversion adapters for bar-end mirror installation"
+          "desc": "Adapters for installing aftermarket bar-end mirrors on motorcycles with threaded handlebar holes, ensuring a secure and proper fit."
+        }
+      ]
+    },
+    {
+      "name": "Footpegs",
+      "identifier": "footpegs",
+      "benefits": [
+        {
+          "title": "Durable Material",
+          "desc": "Entire footpegs are made of high-strength aluminum for enhanced safety and corrosion resistance."
+        },
+        {
+          "title": "New Technology",
+          "desc": "Depending on the model, footpegs are either fully CNC-manufactured or made using advanced high-pressure die-casting."
+        },
+        {
+          "title": "Precision Engineering",
+          "desc": "Carefully designed and precisely finished for exceptional functionality and aesthetics."
+        },
+        {
+          "title": "Durable Surface Finishes",
+          "desc": "Resistant to fading, corrosion, and wear, ensuring long-term durability and a fresh, high-quality finish."
+        },
+        {
+          "title": "High Vibration Damping",
+          "desc": "Engine vibrations are significantly absorbed thanks to specialized rubber inserts (except for rare models due to their specific design)."
+        },
+        {
+          "title": "Anti-Slip Surface",
+          "desc": "Provides strong grip on the footpegs for enhanced safety while riding (except for rare models due to their specific design)."
+        },
+        {
+          "title": "Adjustability of Footpegs",
+          "desc": "Footpeg mounts allow for position adjustment along the axis."
+        },
+        {
+          "title": "Adjustability of Footpegs of Positioning arms of Clamps",
+          "desc": "Designed with a wide range of adjustability, allowing for optimal positioning to suit individual preferences (available in different lengths and shapes)"
+        }
+      ],
+      "subcategories": [
+        {
+          "name": "Rider Footpegs",
+          "position": "1",
+          "desc": "Depending on the motorcycle model, the appropriate mounts are included."
+        },
+        {
+          "name": "Passenger Footpegs",
+          "position": "2",
+          "desc": "Depending on the motorcycle model, the appropriate mounts are included."
+        },
+        {
+          "name": "Highway Footpegs for 25.4mm, 32mm, 35mm, and 38mm Engine Bars",
+          "position": "3",
+          "desc": "Various types of footpegs and clamps for mounting footpegs on engine bars are available, with a special rubber strap included for a secure installation and surface protection."
+        }
+      ]
+    },
+    {
+      "name": "CNC Levers",
+      "identifier": "cnc_levers",
+      "benefits": [
+        {
+          "title": "High precision CNC Cutting",
+          "desc": "Each element is meticulously crafted with high accuracy."
+        },
+        {
+          "title": "Long-lasting anodized color",
+          "desc": "Anodized according to standards for long-lasting resistance to friction and changing weather conditions (ensures durable color)."
+        },
+        {
+          "title": "Stabile positions",
+          "desc": "Thanks to the three components that form each adjuster, combined with a high-quality finish, the adjusters maintain a stable position."
+        },
+        {
+          "title": "Top grade materials",
+          "desc": "Entirely CNC-manufactured from reinforced 6061-T6 aluminum."
+        },
+        {
+          "title": "Usefull adjustments",
+          "desc": "Features 6 offset levels, letting you fine-tune the lever position to your preference."
+        },
+        {
+          "title": "Strengthened components",
+          "desc": "Enhance the lever’s longevity and overall durability."
+        }
+      ],
+      "subcategories": [
+        {
+          "name": "Classic Short",
+          "position": "1",
+          "desc": "Sporty two-finger design for quicker response, improved control and a 25mm adjustable offset."
+        },
+        {
+          "name": "Classic Long",
+          "position": "2",
+          "desc": "Similar to OEM length, with a 25mm adjustable offset."
+        },
+        {
+          "name": "5D Short",
+          "position": "3",
+          "desc": "Sporty two-finger design with a 20mm adjustable offset, featuring a stunning shape."
+        },
+        {
+          "name": "5D Long",
+          "position": "4",
+          "desc": "Similar to OEM length with a 25mm adjustable offset, featuring a stunning shape."
+        },
+        {
+          "name": "Cobra Short",
+          "position": "5",
+          "desc": "Sporty two-finger design with a 25mm adjustable offset, featuring a stunning shape of a cobra."
+        },
+        {
+          "name": "Foldable & Extendable",
+          "position": "6",
+          "desc": "Foldable design prevents damage from falls, with adjustable length and a 25mm offset."
         }
       ]
     },
@@ -194,49 +220,120 @@
       "identifier": "upper_stay_brackets",
       "benefits": [
         {
-          "title": "Structural Reinforcement",
-          "desc": "Added stability and support for motorcycle frame components"
+          "title": "High grade Material",
+          "desc": "Heavy-duty aluminum, high-grade steel, or robust composite (depending on the motorcycle model)."
         },
         {
-          "title": "Precision Fit",
-          "desc": "Engineered for exact fitment and optimal load distribution"
+          "title": "High-Pressure Injection Technology",
+          "desc": "Advanced manufacturing ensures exceptional durability (except for steel models)."
+        },
+        {
+          "title": "Uncompromised Precision",
+          "desc": "Delivers a perfect fit without stress during installation."
+        },
+        {
+          "title": "Durability",
+          "desc": "Built to OEM standards, providing reliability on the road."
         }
-      ],
-      "subcategories": []
+      ]
     },
     {
-      "name": "Wind Protections",
+      "name": "Engine Starters",
+      "identifier": "engine_starters",
+      "benefits": [
+        {
+          "title": "Consistent Power Delivery",
+          "desc": "Delivers stable performance in any engine condition."
+        },
+        {
+          "title": "Reliability",
+          "desc": "Built with top-quality components for long-lasting, trouble-free use."
+        },
+        {
+          "title": "Water and Dust Resistance",
+          "desc": "Durable construction shields against moisture and debris, maintaining operation even in harsh conditions."
+        }
+      ]
+    },
+    {
+      "name": "Windscreens",
       "identifier": "wind_protections",
       "benefits": [
         {
-          "title": "Wind Deflection",
-          "desc": "Effective protection from wind fatigue and weather elements"
+          "title": "Aerodynamic elevation",
+          "desc": "The elevated surface reduces helmet buffeting and wind turbulence, enhancing rider comfort and focus, especially at high speeds (Some models are available without the elevated surface)."
         },
         {
-          "title": "Improved Aerodynamics",
-          "desc": "Streamlined design enhances bike performance and comfort"
+          "title": "Impact-Resistant Polycarbonate",
+          "desc": "Made from pure polycarbonate, far superior to acrylic and ABS, ensuring maximum durability and rider safety."
+        },
+        {
+          "title": "Crack-Proof & Shock Absorbing",
+          "desc": "Withstands accidents, slides, and impacts from rocks or sharp objects, eliminating the risk of dangerous fractures."
+        },
+        {
+          "title": "Injection-Molded Precision",
+          "desc": "Advanced manufacturing guarantees a perfect fit, flawless structure, and no discoloration, unlike pressed alternatives."
+        },
+        {
+          "title": "OEM-Compatible Dimensions",
+          "desc": "Matches factory windscreen size, with a spoiler for improved performance, ensuring a seamless fit without modifications."
+        },
+        {
+          "title": "Stress-Free Mounting",
+          "desc": "Engineered for a precise, strain-free installation"
+        },
+        {
+          "title": "Authenticity",
+          "desc": "Each windscreen includes an official hologram, guaranteeing originality and premium quality."
         }
       ],
       "subcategories": [
         {
           "name": "Precision-Fit (Model-Specific)",
           "position": "1",
-          "desc": "Custom-designed windscreens for specific motorcycle models"
+          "desc": "For most racing, sport, and naked motorcycles, designed to fit specific models."
         },
         {
-          "name": "Universal Mount (Headlight/Handlebar)",
+          "name": "Universal Mount",
           "position": "2",
-          "desc": "Universal windscreens with flexible mounting options"
+          "desc": "Fits most motorcycles, mounting to the same points as handlebar mirrors using existing M8/M10 mirror bolts (Handlebar version) or the mounts of a 7\" round headlight (Headlight version)."
         },
         {
           "name": "For Harley",
           "position": "3",
-          "desc": "Harley Davidson specific windscreen solutions"
+          "desc": "In various heights and shapes to fit different Harley models."
         },
         {
           "name": "Hand Wind Protectors (Handguards)",
           "position": "4",
-          "desc": "Hand guards for protection from wind and debris"
+          "desc": "Fits most motorcycles, mounting to the same points as handlebar mirrors using existing M8/M10 mirror bolts."
+        }
+      ]
+    },
+    {
+      "name": "Engine Covers",
+      "identifier": "engine_covers",
+      "benefits": [
+        {
+          "title": "High grade Material",
+          "desc": "Made from heavy-duty aluminum, the same material used in original covers, known for its high resistance to damage and wear."
+        },
+        {
+          "title": "Advanced Technology",
+          "desc": "Produced using high-pressure die casting techniques, ensuring exceptional durability."
+        },
+        {
+          "title": "Uncompromised Precision",
+          "desc": "Delivers a perfect fit without stress during installation."
+        },
+        {
+          "title": "Enhanced Temperature Resistance",
+          "desc": "The color withstands extremely high temperatures, maintaining the aesthetic appearance of your bike even under tough conditions."
+        },
+        {
+          "title": "Durability",
+          "desc": "Built to OEM standards, providing reliability on the road."
         }
       ]
     }
