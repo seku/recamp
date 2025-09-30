@@ -16,7 +16,7 @@
         <div class="category-name-badge position-absolute">
           <h1 class="category-hero-title"><%= @category.name %></h1>
         </div>
-        
+
         <!-- Shop Now Button (Center) -->
         <div class="category-hero-button">
           <%= link_to "SHOP NOW", root_path, class: "btn btn-shop-now" %>
@@ -30,7 +30,7 @@
 <section class="category-content-section py-5">
   <div class="container">
     <div class="content-grid" data-controller="content-toggle">
-      
+
       <% @category.benefits_list.each_with_index do |benefit, index| %>
         <!-- Content Item <%= index + 1 %> -->
         <div class="content-item" data-content-toggle-target="item">
@@ -77,34 +77,37 @@
         <h2 class="section-title">Explore Our <%= @category.name %> Collection</h2>
       </div>
     </div>
-    
+
     <div class="row">
       <div class="col-12">
         <% if @subcategories.any? %>
           <% @subcategories.each do |subcategory| %>
             <div class="subcategory-detail-box mb-4">
               <div class="row align-items-center">
-                <!-- Left side: Content (50%) -->
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-4">
                   <div class="subcategory-content">
                     <h3 class="subcategory-name"><%= subcategory.name %></h3>
                     <p class="subcategory-description">
-                      High-quality <%= subcategory.name.downcase %> designed for performance and durability. 
-                      Perfect for enhancing your motorcycle's functionality and style. 
-                      Choose from our premium selection of parts.
+                      <%= subcategory.description.present? ? subcategory.description : "High-quality #{subcategory.name.downcase} designed for performance and durability." %>
                     </p>
                     <div class="subcategory-action">
                       <%= link_to "SHOP NOW", category_path(name: subcategory.name), class: "btn btn-subcategory-shop" %>
                     </div>
                   </div>
                 </div>
-                
-                <!-- Right side: Image (50%) -->
-                <div class="col-12 col-md-6">
-                  <div class="subcategory-image">
-                    <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=400&fit=crop&crop=center" 
-                         alt="<%= subcategory.name %>" 
-                         class="img-fluid">
+                <div class="col-12 col-md-8">
+                  <div class="subcategory-image position-relative" style="height: 300px;">
+                    <% subcategory_image_url = subcategory_image_url(subcategory) %>
+                    <% if subcategory_image_url %>
+                      <img src="<%= subcategory_image_url %>"
+                           alt="<%= subcategory.name %>"
+                           class="img-fluid w-100 h-100"
+                           style="object-fit: cover;">
+                    <% else %>
+                      <div class="subcategory-image-placeholder bg-light d-flex align-items-center justify-content-center w-100 h-100">
+                        <i class="fas fa-cog fa-3x text-muted"></i>
+                      </div>
+                    <% end %>
                   </div>
                 </div>
               </div>
@@ -119,6 +122,3 @@
     </div>
   </div>
 </section>
-
-
-

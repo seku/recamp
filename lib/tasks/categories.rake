@@ -70,6 +70,8 @@ namespace :categories do
             identifier: subcategory_identifier,
             parent_id: category.id,
             active: true,
+            position: subcategory_position,
+            description: subcategory_desc,
             benefits: [{ 'title' => 'Description', 'desc' => subcategory_desc }]
           )
           

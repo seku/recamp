@@ -11,7 +11,7 @@ class CategoriesController < ApplicationController
       return
     end
     
-    @subcategories = @category.children.active
+    @subcategories = @category.children.active.ordered_by_position
     @breadcrumb_path = @category.ancestors.reverse + [@category]
   end
 end

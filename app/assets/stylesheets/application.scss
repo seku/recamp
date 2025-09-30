@@ -250,17 +250,17 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, select {
     height: 50vh;
     min-height: 400px;
   }
-  
+
   .category-hero-title {
     font-size: 1.8rem;
   }
-  
+
   .category-name-badge {
     padding: 0 1.5rem;
     padding-left: 1rem;
     height: 82px;
   }
-  
+
   .btn-shop-now {
     font-size: 1rem;
     padding: 0 2rem;
@@ -353,15 +353,15 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, select {
     flex: 1 1 100%;
     min-width: 100%;
   }
-  
+
   .content-grid {
     gap: 2rem;
   }
-  
+
   .content-title {
     font-size: 1.1rem;
   }
-  
+
   .plus-icon {
     font-size: 18px;
   }
@@ -383,7 +383,7 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, select {
 
 .subcategory-detail-box {
   background-color: white;
-  padding: 2rem 4rem;
+  padding: 0 4rem;
   margin: 2rem 10%;
   border-radius: 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -433,14 +433,24 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, select {
 }
 
 .subcategory-image {
-  padding-left: 2rem;
+  height: 300px !important;
+  overflow: hidden;
+  border-radius: 0;
 }
 
 .subcategory-image img {
   width: 100%;
-  height: 300px;
+  height: 100%;
   object-fit: cover;
   border-radius: 0;
+}
+
+.subcategory-image-placeholder,
+.subcategory-image-fallback {
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+  background-color: #f8f9fa;
 }
 
 /* Responsive adjustments for subcategory section */
@@ -448,25 +458,25 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, select {
   .section-title {
     font-size: 2rem;
   }
-  
+
   .subcategory-detail-box {
     padding: 1.5rem 2rem;
     margin: 1.5rem 10%;
   }
-  
+
   .subcategory-content {
     padding-right: 0;
     margin-bottom: 1.5rem;
   }
-  
+
   .subcategory-image {
     padding-left: 0;
   }
-  
+
   .subcategory-name {
     font-size: 1.5rem;
   }
-  
+
   .btn-subcategory-shop {
     font-size: 1rem;
     padding: 0;

@@ -13,6 +13,7 @@ class Category < ApplicationRecord
   scope :inactive, -> { where(active: false) }
   scope :root_categories, -> { where(parent_id: nil) }
   scope :subcategories, -> { where.not(parent_id: nil) }
+  scope :ordered_by_position, -> { order(:position) }
 
   def root?
     parent_id.nil?
@@ -43,6 +44,24 @@ class Category < ApplicationRecord
   def main_image_path
     return nil unless identifier.present?
     "categories/#{identifier}/main.png"
+  end
+
+  def subcategory_image_path
+    return nil unless parent_id.present? && position.present? && parent&.identifier.present?
+    
+    # Try different extensions in order of preference
+    extensions = ['.png', '.jpg', '.jpeg']
+    base_path = "categories/#{parent.identifier}/#{position}"
+    
+    extensions.each do |ext|
+      full_path = base_path + ext
+      if File.exist?(Rails.root.join('app', 'assets', 'images', full_path))
+        return full_path
+      end
+    end
+    
+    # Default to .png if no file found
+    base_path + '.png'
   end
 
   def benefits_list

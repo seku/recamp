@@ -44,15 +44,22 @@ def create_categories_from_json(categories_array)
       ) do |subcat|
         subcat.identifier = subcategory_identifier
         subcat.active = true
+        subcat.position = subcategory_position
+        subcat.description = subcategory_desc
         subcat.benefits = [{ 'title' => 'Description', 'desc' => subcategory_desc }]
       end
       
       # Update existing subcategory if needed
       if subcategory.persisted?
         current_benefits = [{ 'title' => 'Description', 'desc' => subcategory_desc }]
-        if subcategory.identifier != subcategory_identifier || subcategory.benefits != current_benefits
+        if subcategory.identifier != subcategory_identifier || 
+           subcategory.position != subcategory_position || 
+           subcategory.description != subcategory_desc ||
+           subcategory.benefits != current_benefits
           subcategory.update!(
             identifier: subcategory_identifier,
+            position: subcategory_position,
+            description: subcategory_desc,
             benefits: current_benefits
           )
         end
