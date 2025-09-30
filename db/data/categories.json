@@ -3,6 +3,7 @@
     {
       "name": "LED Headlights",
       "identifier": "led_headlights",
+      "position": "1",
       "benefits": [
         {
           "title": "High Precision Lighting",
@@ -16,26 +17,31 @@
       "subcategories": [
         {
           "name": "For Harley and Cars (7 inch)",
+          "identifier": "for_harley_and_cars_7_inch",
           "position": "1",
           "desc": "7-inch LED headlights compatible with Harley Davidson and classic cars"
         },
         {
           "name": "For Lorries",
+          "identifier": "for_lorries",
           "position": "2",
           "desc": "Heavy-duty LED headlights designed for commercial vehicles"
         },
         {
           "name": "Side Lights for Motorcycles (4,5 inch)",
+          "identifier": "side_lights_for_motorcycles_4_5_inch",
           "position": "3",
           "desc": "Compact 4.5-inch side mounted LED lights for motorcycles"
         },
         {
           "name": "Fog Lights for Cars",
+          "identifier": "fog_lights_for_cars",
           "position": "4",
           "desc": "Specialized fog lights for improved visibility in adverse weather"
         },
         {
           "name": "Back Lights for Motorcycles",
+          "identifier": "back_lights_for_motorcycles",
           "position": "5",
           "desc": "High-visibility LED tail lights for enhanced safety"
         }
@@ -44,6 +50,7 @@
     {
       "name": "Mirrors",
       "identifier": "mirrors",
+      "position": "2",
       "benefits": [
         {
           "title": "High grade Material",
@@ -73,26 +80,31 @@
       "subcategories": [
         {
           "name": "Universal (M8/M10 Bolt Mount)",
+          "identifier": "universal_m8_m10_bolt_mount",
           "position": "1",
           "desc": "Fits most motorcycles and mounts to the handlebar with standard M8/M10 bolts, supporting both clockwise and counterclockwise threaded screws."
         },
         {
           "name": "Universal (Bar-End Mount 1\" & 7/8\")",
+          "identifier": "universal_bar_end_mount_1_7_8",
           "position": "2",
           "desc": "Fits most motorcycles with 22mm (7/8\") and 25.4mm (1\") round handlebars, with the option to mount directly on the handlebar or bar ends."
         },
         {
           "name": "For Harley (H-D Mount)",
+          "identifier": "for_harley_hd_mount",
           "position": "3",
           "desc": "Fits most Harley-Davidson models from 1982–2024 with standard long M8 bolts."
         },
         {
           "name": "Mirror Fairing Adapters",
+          "identifier": "mirror_fairing_adapters",
           "position": "4",
           "desc": "Adapters for installing aftermarket mirrors on stock fairing mounts of sport motorcycles."
         },
         {
           "name": "Bar-End Mirror Adapters",
+          "identifier": "bar_end_mirror_adapters",
           "position": "5",
           "desc": "Adapters for installing aftermarket bar-end mirrors on motorcycles with threaded handlebar holes, ensuring a secure and proper fit."
         }
@@ -101,6 +113,7 @@
     {
       "name": "Footpegs",
       "identifier": "footpegs",
+      "position": "3",
       "benefits": [
         {
           "title": "Durable Material",
@@ -138,16 +151,19 @@
       "subcategories": [
         {
           "name": "Rider Footpegs",
+          "identifier": "rider_footpegs",
           "position": "1",
           "desc": "Depending on the motorcycle model, the appropriate mounts are included."
         },
         {
           "name": "Passenger Footpegs",
+          "identifier": "passenger_footpegs",
           "position": "2",
           "desc": "Depending on the motorcycle model, the appropriate mounts are included."
         },
         {
           "name": "Highway Footpegs for 25.4mm, 32mm, 35mm, and 38mm Engine Bars",
+          "identifier": "highway_footpegs_for_engine_bars",
           "position": "3",
           "desc": "Various types of footpegs and clamps for mounting footpegs on engine bars are available, with a special rubber strap included for a secure installation and surface protection."
         }
@@ -156,6 +172,7 @@
     {
       "name": "CNC Levers",
       "identifier": "cnc_levers",
+      "position": "4",
       "benefits": [
         {
           "title": "High precision CNC Cutting",
@@ -185,31 +202,37 @@
       "subcategories": [
         {
           "name": "Classic Short",
+          "identifier": "classic_short",
           "position": "1",
           "desc": "Sporty two-finger design for quicker response, improved control and a 25mm adjustable offset."
         },
         {
           "name": "Classic Long",
+          "identifier": "classic_long",
           "position": "2",
           "desc": "Similar to OEM length, with a 25mm adjustable offset."
         },
         {
           "name": "5D Short",
+          "identifier": "5d_short",
           "position": "3",
           "desc": "Sporty two-finger design with a 20mm adjustable offset, featuring a stunning shape."
         },
         {
           "name": "5D Long",
+          "identifier": "5d_long",
           "position": "4",
           "desc": "Similar to OEM length with a 25mm adjustable offset, featuring a stunning shape."
         },
         {
           "name": "Cobra Short",
+          "identifier": "cobra_short",
           "position": "5",
           "desc": "Sporty two-finger design with a 25mm adjustable offset, featuring a stunning shape of a cobra."
         },
         {
           "name": "Foldable & Extendable",
+          "identifier": "foldable_extendable",
           "position": "6",
           "desc": "Foldable design prevents damage from falls, with adjustable length and a 25mm offset."
         }
@@ -218,6 +241,7 @@
     {
       "name": "Upper Stay Brackets",
       "identifier": "upper_stay_brackets",
+      "position": "5",
       "benefits": [
         {
           "title": "High grade Material",
@@ -240,6 +264,7 @@
     {
       "name": "Engine Starters",
       "identifier": "engine_starters",
+      "position": "6",
       "benefits": [
         {
           "title": "Consistent Power Delivery",
@@ -258,6 +283,7 @@
     {
       "name": "Windscreens",
       "identifier": "wind_protections",
+      "position": "7",
       "benefits": [
         {
           "title": "Aerodynamic elevation",
@@ -291,21 +317,25 @@
       "subcategories": [
         {
           "name": "Precision-Fit (Model-Specific)",
+          "identifier": "precision_fit_model_specific",
           "position": "1",
           "desc": "For most racing, sport, and naked motorcycles, designed to fit specific models."
         },
         {
           "name": "Universal Mount",
+          "identifier": "universal_mount",
           "position": "2",
           "desc": "Fits most motorcycles, mounting to the same points as handlebar mirrors using existing M8/M10 mirror bolts (Handlebar version) or the mounts of a 7\" round headlight (Headlight version)."
         },
         {
           "name": "For Harley",
+          "identifier": "for_harley",
           "position": "3",
           "desc": "In various heights and shapes to fit different Harley models."
         },
         {
           "name": "Hand Wind Protectors (Handguards)",
+          "identifier": "hand_wind_protectors_handguards",
           "position": "4",
           "desc": "Fits most motorcycles, mounting to the same points as handlebar mirrors using existing M8/M10 mirror bolts."
         }
@@ -314,6 +344,7 @@
     {
       "name": "Engine Covers",
       "identifier": "engine_covers",
+      "position": "8",
       "benefits": [
         {
           "title": "High grade Material",

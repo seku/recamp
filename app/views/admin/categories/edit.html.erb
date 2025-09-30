@@ -1,0 +1,10 @@
+<h1 class="mb-4">Edit Category</h1>
+
+<%= render 'form', category: @category, parent_category: @category.parent %>
+
+<div class="mt-3">
+  <%= link_to 'Back to Categories', admin_categories_path, class: "btn btn-secondary" %>
+  <% if @category.parent %>
+    <%= link_to 'Back to Parent Category', admin_category_path(@category.parent), class: "btn btn-outline-secondary" %>
+  <% end %>
+</div>

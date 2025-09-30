@@ -1,13 +1,16 @@
 class Category < ApplicationRecord
   belongs_to :parent, class_name: 'Category', optional: true
   has_many :children, class_name: 'Category', foreign_key: 'parent_id', dependent: :destroy
+  has_many :benefits, dependent: :destroy
+
+  accepts_nested_attributes_for :benefits, allow_destroy: true
 
   validates :name, presence: true, length: { maximum: 255 }
   validates :active, inclusion: { in: [true, false] }
   validates :identifier, presence: true, if: :root?
   validates :identifier, uniqueness: { scope: :parent_id }, allow_blank: true
 
-  serialize :benefits, coder: JSON
+  # serialize :benefits, coder: JSON
 
   scope :active, -> { where(active: true) }
   scope :inactive, -> { where(active: false) }
@@ -64,15 +67,5 @@ class Category < ApplicationRecord
     base_path + '.png'
   end
 
-  def benefits_list
-    return [] unless benefits.present?
-    case benefits
-    when String
-      JSON.parse(benefits) rescue []
-    when Array
-      benefits
-    else
-      []
-    end
-  end
+  # benefits_list is now handled by association
 end

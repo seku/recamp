@@ -1,0 +1,86 @@
+<div class="bg-white border rounded p-4">
+  <% if @category.errors.any? %>
+    <div class="alert alert-danger">
+      <h5>There were errors saving this category:</h5>
+      <ul>
+        <% @category.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= form_with(model: [:admin, @category], local: true) do |form| %>
+    <div class="mb-3">
+      <%= form.label :name, class: "form-label" %>
+      <%= form.text_field :name, class: "form-control border rounded", required: true, maxlength: 255 %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :active, class: "form-label" %>
+      <%= form.select :active, [["Active", true], ["Inactive", false]], {}, class: "form-select border rounded" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :identifier, class: "form-label" %>
+      <%= form.text_field :identifier, class: "form-control border rounded" %>
+      <div class="form-text">Required for root categories only.</div>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :position, class: "form-label" %>
+      <%= form.number_field :position, class: "form-control border rounded", min: 1 %>
+    </div>
+
+    <div class="mb-3" data-controller="benefit">
+      <label class="form-label">Benefits</label>
+      <div class="border rounded p-3 bg-light" data-benefit-target="container">
+        <%= form.fields_for :benefits do |benefit_fields| %>
+          <div class="mb-2 row align-items-center" data-benefit-target="item">
+            <div class="col-md-4">
+              <%= benefit_fields.text_field :title, class: "form-control border rounded", placeholder: "Benefit title", required: true, maxlength: 255 %>
+            </div>
+            <div class="col-md-6">
+              <%= benefit_fields.text_field :desc, class: "form-control border rounded", placeholder: "Benefit description", required: true %>
+            </div>
+            <div class="col-md-2 d-flex align-items-center">
+              <% if benefit_fields.object.persisted? %>
+                <%= benefit_fields.check_box :_destroy, class: "form-check-input ms-2", data: { action: "benefit#remove" } %>
+                <span class="ms-1">Remove</span>
+              <% else %>
+                <%= link_to "Remove", "#", class: "btn btn-sm btn-outline-danger ms-2", data: { action: "benefit#remove" } %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <template data-benefit-target="template">
+        <div class="mb-2 row align-items-center" data-benefit-target="item">
+          <div class="col-md-4">
+            <input type="text" name="category[benefits_attributes][NEW_RECORD][title]" class="form-control border rounded" placeholder="Benefit title" required maxlength="255" />
+          </div>
+          <div class="col-md-6">
+            <input type="text" name="category[benefits_attributes][NEW_RECORD][desc]" class="form-control border rounded" placeholder="Benefit description" required />
+          </div>
+          <div class="col-md-2 d-flex align-items-center">
+            <a href="#" class="btn btn-sm btn-outline-danger ms-2" data-action="benefit#remove">Remove</a>
+          </div>
+        </div>
+      </template>
+      <div>
+        <button type="button" class="btn btn-sm btn-outline-primary mt-2" data-action="benefit#add">Add Benefit</button>
+      </div>
+      <div class="form-text">Add, edit, or remove benefits for this category.</div>
+    </div>
+
+    <%# Parent category selection for subcategories %>
+    <div class="mb-3">
+      <%= form.label :parent_id, "Parent Category", class: "form-label" %>
+      <%= form.collection_select :parent_id, Category.root_categories, :id, :name, { include_blank: "None (Root Category)" }, class: "form-select border rounded" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.submit class: "btn btn-primary" %>
+      <%= link_to "Cancel", admin_categories_path, class: "btn btn-secondary ms-2" %>
+    </div>
+  <% end %>
+</div>

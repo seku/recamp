@@ -1,0 +1,72 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-header">
+      <h3>
+        Category: <%= @category.name %>
+        <% if @category.active? %>
+          <span class="badge bg-success">Active</span>
+        <% else %>
+          <span class="badge bg-secondary">Inactive</span>
+        <% end %>
+      </h3>
+    </div>
+    <div class="card-body">
+      <dl class="row">
+        <dt class="col-sm-3">Identifier</dt>
+        <dd class="col-sm-9"><%= @category.identifier.presence || "-" %></dd>
+
+        <dt class="col-sm-3">Position</dt>
+        <dd class="col-sm-9"><%= @category.position.presence || "-" %></dd>
+
+        <dt class="col-sm-3">Parent Category</dt>
+        <dd class="col-sm-9">
+          <% if @category.parent %>
+            <%= link_to @category.parent.name, admin_category_path(@category.parent) %>
+          <% else %>
+            <span class="text-muted">Root</span>
+          <% end %>
+        </dd>
+
+        <dt class="col-sm-3">Benefits</dt>
+        <dd class="col-sm-9">
+          <% if @category.benefits.any? %>
+            <ul>
+              <% @category.benefits.each do |benefit| %>
+                <li>
+                  <strong><%= benefit.title %></strong><br>
+                  <span class="ms-2"><%= benefit.desc %></span>
+                </li>
+              <% end %>
+            </ul>
+          <% else %>
+            <span class="text-muted">None</span>
+          <% end %>
+        </dd>
+      </dl>
+      <hr>
+      <h5>Subcategories</h5>
+      <% if @subcategories.any? %>
+        <ul class="list-group mb-3">
+          <% @subcategories.each do |subcat| %>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <%= link_to subcat.name, admin_category_path(subcat) %>
+              <% if subcat.active? %>
+                <span class="badge bg-success">Active</span>
+              <% else %>
+                <span class="badge bg-secondary">Inactive</span>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      <% else %>
+        <p class="text-muted">No subcategories.</p>
+      <% end %>
+      <%= link_to "Add Subcategory", new_admin_category_path(parent_id: @category.id), class: "btn btn-primary" %>
+    </div>
+    <div class="card-footer text-end">
+      <%= link_to "Edit", edit_admin_category_path(@category), class: "btn btn-warning me-2" %>
+      <%= link_to "Delete", admin_category_path(@category), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-danger" %>
+      <%= link_to "Back to Categories", admin_categories_path, class: "btn btn-secondary" %>
+    </div>
+  </div>
+</div>

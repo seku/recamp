@@ -21,4 +21,8 @@ Rails.application.routes.draw do
   get 'harley', to: 'categories#index'
   get 'shop', to: 'categories#index'  
   get 'contact', to: 'categories#index'
+  namespace :admin do
+    resources :categories
+  end
+  get '/admin', to: redirect('/admin/categories')
 end

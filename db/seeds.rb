@@ -9,6 +9,7 @@ def create_categories_from_json(categories_array)
   categories_array.each do |category_data|
     name = category_data['name']
     identifier = category_data['identifier']
+    position = category_data['position']
     benefits = category_data['benefits'] || []
     subcategories = category_data['subcategories'] || []
     
@@ -16,14 +17,23 @@ def create_categories_from_json(categories_array)
     category = Category.find_or_create_by!(identifier: identifier, parent_id: nil) do |cat|
       cat.name = name
       cat.active = true
-      cat.benefits = benefits
+      cat.position = position
     end
-    
+
     # Update existing category if needed
-    if category.persisted? && (category.name != name || category.benefits != benefits)
-      category.update!(name: name, benefits: benefits)
+    if category.persisted? && (category.name != name || category.position != position)
+      category.update!(name: name, position: position)
     end
-    
+
+    # Create/update benefits for main category
+    if benefits.any?
+      category.benefits.destroy_all
+      benefits.each do |benefit|
+        next unless benefit['title'].present? && benefit['desc'].present?
+        category.benefits.create!(title: benefit['title'], desc: benefit['desc'])
+      end
+    end
+
     puts "Created/Updated category: #{category.name} (#{category.identifier})"
     
     # Create subcategories
@@ -46,22 +56,27 @@ def create_categories_from_json(categories_array)
         subcat.active = true
         subcat.position = subcategory_position
         subcat.description = subcategory_desc
-        subcat.benefits = [{ 'title' => 'Description', 'desc' => subcategory_desc }]
       end
       
       # Update existing subcategory if needed
       if subcategory.persisted?
-        current_benefits = [{ 'title' => 'Description', 'desc' => subcategory_desc }]
         if subcategory.identifier != subcategory_identifier || 
            subcategory.position != subcategory_position || 
-           subcategory.description != subcategory_desc ||
-           subcategory.benefits != current_benefits
+           subcategory.description != subcategory_desc
           subcategory.update!(
             identifier: subcategory_identifier,
             position: subcategory_position,
-            description: subcategory_desc,
-            benefits: current_benefits
+            description: subcategory_desc
           )
+        end
+      end
+
+      # Add benefits for subcategory if present
+      if subcategory_data['benefits']
+        subcategory.benefits.destroy_all
+        subcategory_data['benefits'].each do |benefit|
+          next unless benefit['title'].present? && benefit['desc'].present?
+          subcategory.benefits.create!(title: benefit['title'], desc: benefit['desc'])
         end
       end
       

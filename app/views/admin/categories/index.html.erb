@@ -1,0 +1,58 @@
+<div class="container mt-4">
+  <h1 class="mb-4">Admin: Categories</h1>
+
+  <div class="mb-3">
+    <%= link_to 'New Category', new_admin_category_path, class: 'btn btn-primary' %>
+  </div>
+
+  <table class="table table-bordered table-hover">
+    <thead class="table-light">
+      <tr>
+        <th>Name</th>
+        <th>Identifier</th>
+        <th>Active</th>
+        <th>Position</th>
+        <th>Parent</th>
+        <th>Subcategories</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @categories.each do |category| %>
+        <tr>
+          <td>
+            <%= link_to category.name, admin_category_path(category) %>
+          </td>
+          <td><%= category.identifier %></td>
+          <td>
+            <% if category.active? %>
+              <span class="badge bg-success">Active</span>
+            <% else %>
+              <span class="badge bg-secondary">Inactive</span>
+            <% end %>
+          </td>
+          <td><%= category.position %></td>
+          <td><%= category.parent&.name || 'Root' %></td>
+          <td>
+            <% if category.children.any? %>
+              <ul class="list-unstyled mb-0">
+                <% category.children.ordered_by_position.each do |subcat| %>
+                  <li>
+                    <%= link_to subcat.name, admin_category_path(subcat) %>
+                  </li>
+                <% end %>
+              </ul>
+            <% else %>
+              <span class="text-muted">None</span>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to 'Show', admin_category_path(category), class: 'btn btn-sm btn-info' %>
+            <%= link_to 'Edit', edit_admin_category_path(category), class: 'btn btn-sm btn-warning' %>
+            <%= link_to 'Delete', admin_category_path(category), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
