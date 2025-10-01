@@ -12,6 +12,17 @@
 /* Inter Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+/* custom Sculpin Font */
+@font-face {
+  font-family: "Sculpin";
+  src: font-url("sculpin_medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+
+
 /* Bootstrap CSS Framework */
 @import "bootstrap";
 
@@ -23,6 +34,10 @@ body, html {
 /* Apply Inter to all text elements */
 h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, select {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.sculpin-font {
+  font-family: "Sculpin";
 }
 
 /* Category Cards Styles */
