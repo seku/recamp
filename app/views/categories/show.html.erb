@@ -14,7 +14,7 @@
       <div class="col-12 d-flex flex-column justify-content-center align-items-center text-center">
         <!-- Category Name in Red Rectangle (30% from top) -->
         <div class="category-name-badge position-absolute">
-          <h1 class="category-hero-title"><%= @category.name %></h1>
+          <h1 class="category-hero-title sculpin-font"><%= @category.name %></h1>
         </div>
 
         <!-- Shop Now Button (Center) -->
@@ -45,24 +45,6 @@
             </div>
           </div>
         </div>
-      <% end %>
-
-      <% if @category.benefits.length < 8 %>
-        <% (8 - @category.benefits.length).times do |i| %>
-          <!-- Filler Content Item <%= @category.benefits.length + i + 1 %> -->
-          <div class="content-item" data-content-toggle-target="item">
-            <h4 class="content-title">Premium Quality <%= @category.name %></h4>
-            <div class="content-toggle" data-action="click->content-toggle#toggle">
-              <span class="plus-icon">+</span>
-            </div>
-            <div class="red-line"></div>
-            <div class="collapse">
-              <div class="content-expanded">
-                <p>Our <%= @category.name.downcase %> are crafted with precision and attention to detail, ensuring superior performance and durability. Every component is designed to meet the highest standards of quality and reliability.</p>
-              </div>
-            </div>
-          </div>
-        <% end %>
       <% end %>
 
     </div>
