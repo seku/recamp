@@ -31,7 +31,7 @@
   <div class="container">
     <div class="content-grid" data-controller="content-toggle">
 
-      <% @category.benefits_list.each_with_index do |benefit, index| %>
+      <% @category.benefits.each_with_index do |benefit, index| %>
         <!-- Content Item <%= index + 1 %> -->
         <div class="content-item" data-content-toggle-target="item">
           <h4 class="content-title"><%= benefit['title'] %></h4>
@@ -47,9 +47,9 @@
         </div>
       <% end %>
 
-      <% if @category.benefits_list.length < 8 %>
-        <% (8 - @category.benefits_list.length).times do |i| %>
-          <!-- Filler Content Item <%= @category.benefits_list.length + i + 1 %> -->
+      <% if @category.benefits.length < 8 %>
+        <% (8 - @category.benefits.length).times do |i| %>
+          <!-- Filler Content Item <%= @category.benefits.length + i + 1 %> -->
           <div class="content-item" data-content-toggle-target="item">
             <h4 class="content-title">Premium Quality <%= @category.name %></h4>
             <div class="content-toggle" data-action="click->content-toggle#toggle">
