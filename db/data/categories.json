@@ -6,44 +6,20 @@
       "position": "1",
       "benefits": [
         {
-          "title": "High Precision Lighting",
-          "desc": "Advanced LED technology for superior road illumination"
+          "title": "Premium efficiency",
+          "desc": "Latest-gen  OSRAM  OSLON® SSL LEDs delivering up  to 144 lm/W."
         },
         {
-          "title": "Energy Efficiency",
-          "desc": "Low power consumption with maximum brightness output"
-        }
-      ],
-      "subcategories": [
-        {
-          "name": "For Harley and Cars (7 inch)",
-          "identifier": "for_harley_and_cars_7_inch",
-          "position": "1",
-          "desc": "7-inch LED headlights compatible with Harley Davidson and classic cars"
+          "title": "Scratch-resistant finish",
+          "desc": "Added  Anti-Scratch coating  keeps the lamp looking new for years."
         },
         {
-          "name": "For Lorries",
-          "identifier": "for_lorries",
-          "position": "2",
-          "desc": "Heavy-duty LED headlights designed for commercial vehicles"
+           "title": "Impact-proof lens",
+           "desc": "Outer  lens resists sharp debris and stone hits for  reliability in harsh conditions."
         },
         {
-          "name": "Side Lights for Motorcycles (4,5 inch)",
-          "identifier": "side_lights_for_motorcycles_4_5_inch",
-          "position": "3",
-          "desc": "Compact 4.5-inch side mounted LED lights for motorcycles"
-        },
-        {
-          "name": "Fog Lights for Cars",
-          "identifier": "fog_lights_for_cars",
-          "position": "4",
-          "desc": "Specialized fog lights for improved visibility in adverse weather"
-        },
-        {
-          "name": "Back Lights for Motorcycles",
-          "identifier": "back_lights_for_motorcycles",
-          "position": "5",
-          "desc": "High-visibility LED tail lights for enhanced safety"
+           "title": "Advanced thermal design",
+          "desc": "OSLON  SSL chips on a high-conductivity base, rated  for −40°C to +125°C."
         }
       ]
     },
