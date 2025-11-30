@@ -70,13 +70,12 @@
                   </div>
                 </div>
                 <div class="col-12 col-md-8">
-                  <div class="subcategory-image position-relative" style="height: 300px;">
+                  <div class="subcategory-image position-relative">
                     <% subcategory_image_url = subcategory_image_url(subcategory) %>
                     <% if subcategory_image_url %>
                       <img src="<%= subcategory_image_url %>"
                            alt="<%= subcategory.name %>"
-                           class="img-fluid w-100 h-100"
-                           style="object-fit: cover;">
+                           class="img-fluid w-100 h-100">
                     <% else %>
                       <div class="subcategory-image-placeholder bg-light d-flex align-items-center justify-content-center w-100 h-100">
                         <i class="fas fa-cog fa-3x text-muted"></i>
