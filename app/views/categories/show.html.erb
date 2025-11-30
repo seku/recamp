@@ -27,7 +27,7 @@
       <% @category.benefits.each_with_index do |benefit, index| %>
         <!-- Content Item <%= index + 1 %> -->
         <div class="content-item" data-benefits-accordion-target="item">
-          <h4 class="content-title"><%= benefit['title'] %></h4>
+          <h4 class="content-title" data-action="click->benefits-accordion#toggle"><%= benefit['title'] %></h4>
           <div class="content-toggle" data-action="click->benefits-accordion#toggle">
             <span class="plus-icon">+</span>
           </div>
