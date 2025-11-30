@@ -2,12 +2,7 @@
 
 <!-- Section 1: Hero Section -->
 <section class="category-hero-section position-relative">
-  <% hero_image_url = category_hero_image_url(@category) %>
-  <% if hero_image_url %>
-    <div class="category-hero-background" style="background-image: url('<%= hero_image_url %>')"></div>
-  <% else %>
-    <div class="category-hero-background"></div>
-  <% end %>
+  <%= image_tag category_hero_image_url(@category), alt: @category.name, class: "category-hero-image w-100 h-100" %>
   <div class="container-fluid h-100 position-relative">
     <div class="row h-100">
       <div class="col-12 d-flex flex-column justify-content-center align-items-center text-center">
