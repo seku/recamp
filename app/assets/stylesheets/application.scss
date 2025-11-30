@@ -303,7 +303,7 @@ h1, h2, h3, h4 {
 .plus-icon {
   color: #e74c3c;
   font-size: 20px;
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
   display: inline-block;
 }
 
@@ -317,16 +317,39 @@ h1, h2, h3, h4 {
   background-color: #e74c3c;
   margin: 0.5rem 0;
   display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-/* Plus icon and red line visibility controlled by JavaScript */
-
-.collapse {
+/* Collapsed state (default) */
+.content-item .collapse {
   display: none;
 }
 
-.collapse.show {
+/* Expanded state - controlled by class toggle */
+.content-item.expanded .plus-icon {
+  display: none !important;
+}
+
+.content-item.expanded .red-line {
+  display: block !important;
+  opacity: 1;
+}
+
+.content-item.expanded .collapse {
   display: block;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .content-expanded {

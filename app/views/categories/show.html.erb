@@ -22,13 +22,13 @@
 
 <!-- Section 2: Flex Grid Content Section -->
 <section class="category-content-section py-5">
-  <div class="container" data-controller="collapse-group">
-    <div class="content-grid" data-controller="content-toggle">
+  <div class="container">
+    <div class="content-grid" data-controller="benefits-accordion">
       <% @category.benefits.each_with_index do |benefit, index| %>
         <!-- Content Item <%= index + 1 %> -->
-        <div class="content-item" data-content-toggle-target="item" data-collapse-group-target="item" data-action="click->collapse-group#toggle" data-id="<%= index %>">
+        <div class="content-item" data-benefits-accordion-target="item">
           <h4 class="content-title"><%= benefit['title'] %></h4>
-          <div class="content-toggle" data-action="click->content-toggle#toggle">
+          <div class="content-toggle" data-action="click->benefits-accordion#toggle">
             <span class="plus-icon">+</span>
           </div>
           <div class="red-line"></div>
