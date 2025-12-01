@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Typo" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32">
+  <!-- Generator: Adobe Illustrator 29.8.2, SVG Export Plug-In . SVG Version: 2.1.1 Build 3)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #ff3200;
+      }
+    </style>
+  </defs>
+  <path d="M30.64,16.96l-7.43-12.89-3.25,5.63,4.21,7.3h-9l-8.92,8.92h8.26l4.36-4.36h9.33c1.64,0,2.97-1.33,2.97-2.97,0-.55-.18-1.17-.5-1.65h0Z"/>
+  <path class="st0" d="M14.47,15.33h6.81l-3.25-5.63h-3.86c-1.45,0-2.83.57-3.86,1.6L.04,21.57h8.2l6.23-6.23h0Z"/>
+</svg>
