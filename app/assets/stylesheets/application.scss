@@ -237,12 +237,13 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-.btn-shop-now:hover {
-  background-color: white;
-  color: black;
-  border-color: white;
+  &:hover {
+    background-color: white;
+    color: black;
+    border-color: white;
+    border: 1px solid  #e74c3c;
+  }
 }
 
 /* Responsive adjustments for hero section */
@@ -475,6 +476,7 @@ h1, h2, h3, h4 {
 .btn-subcategory-shop:hover {
   background-color: white;
   color: black;
+  border: 1px solid #e74c3c;
 }
 
 .subcategory-image {
