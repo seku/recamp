@@ -8,7 +8,7 @@
   </div>
 
   <div class="categories-flex-container">
-    <% @categories.each do |category| %>
+    <% @categories.order(:position).each do |category| %>
       <div class="category-flex-item">
         <%= link_to category_path(name: category.name), class: "text-decoration-none" do %>
           <div class="card h-100 shadow-sm border-0 category-card">
