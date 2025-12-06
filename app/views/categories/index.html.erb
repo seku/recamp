@@ -9,7 +9,7 @@
 
   <div class="categories-flex-container">
     <% @categories.order(:position).each do |category| %>
-      <div class="category-flex-item">
+      <div class="category-flex-item <%= category.identifier == 'for_harley' ? 'for_harley' : '' %>">
         <%= link_to category_path(name: category.name), class: "text-decoration-none" do %>
           <div class="card h-100 shadow-sm border-0 category-card">
             <div class="card-body text-center p-4">

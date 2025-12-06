@@ -625,6 +625,13 @@ main {
   min-width: 200px;
 }
 
+.category-flex-item.for_harley {
+  width: 100%;
+  .category-image-container {
+    height: 300px;
+  }
+}
+
 /* Responsive breakpoints */
 @media (max-width: 800px) {
   .category-flex-item {
