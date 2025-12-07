@@ -4,22 +4,67 @@
       "name": "LED Headlights",
       "identifier": "led_headlights",
       "position": "1",
+      "description": "Ride safer after dark: REC-PARTS® LEDs with exclusive OSRAM OSLON® SSL chips cut through the night so you see more and others see you first—outshining other LED lamps.",
       "benefits": [
         {
           "title": "Premium efficiency",
-          "desc": "Latest-gen  OSRAM  OSLON® SSL LEDs delivering up  to 144 lm/W."
+          "desc": "Latest-gen OSRAM OSLON® SSL LEDs delivering up to 144 lm/W (it is around 2-3 times more that regular LED lights)."
         },
         {
           "title": "Scratch-resistant finish",
-          "desc": "Added  Anti-Scratch coating  keeps the lamp looking new for years."
+          "desc": "Added Anti-Scratch coating keeps the lamp looking new for years."
         },
         {
            "title": "Impact-proof lens",
-           "desc": "Outer  lens resists sharp debris and stone hits for  reliability in harsh conditions."
+           "desc": "Outer lens resists sharp debris and stone hits for reliability in harsh conditions."
         },
         {
-           "title": "Advanced thermal design",
-          "desc": "OSLON  SSL chips on a high-conductivity base, rated  for −40°C to +125°C."
+          "title": "Advanced thermal design",
+          "desc": "OSLON SSL chips on a high-conductivity base, rated for −40°C to +125°C."
+        }
+      ],
+      "subcategories": [
+        {
+          "name": "For Harley and Cars (7 inch)",
+          "identifier": "for_harley_and_cars_7_inch",
+          "position": "1",
+          "desc": null
+        },
+        {
+          "name": "For Lorries",
+          "identifier": "for_lorries",
+          "position": "2",
+          "desc": null
+        },
+        {
+          "name": "Side Lights for Motorcycles (4,5 inch)",
+          "identifier": "side_lights_for_motorcycles_45_inch",
+          "position": "3",
+          "desc": null
+        },
+        {
+          "name": "Fog Lights for Cars",
+          "identifier": "fog_lights_for_cars",
+          "position": "4",
+          "desc": null
+        },
+        {
+          "name": "Rear Lights for Motorcycles",
+          "identifier": "rear_lights_for_motorcycles",
+          "position": "5",
+          "desc": null
+        },
+        {
+          "name": "LED Lights Housing and Mounts",
+          "identifier": "led_lights_housing_and_mounts",
+          "position": "6",
+          "desc": null
+        },
+        {
+          "name": "LED Wiring",
+          "identifier": "led_wiring",
+          "position": "7",
+          "desc": null
         }
       ]
     },
