@@ -20,28 +20,40 @@
   </div>
 </section>
 
-<!-- Section 2: Flex Grid Content Section -->
-<section class="category-content-section py-5 <%= @category.benefits.none? ? 'grey-bg' : '' %>">
-  <div class="container">
-    <div class="content-grid" data-controller="benefits-accordion">
-      <% @category.benefits.each_with_index do |benefit, index| %>
-        <!-- Content Item <%= index + 1 %> -->
-        <div class="content-item" data-benefits-accordion-target="item">
-          <h4 class="content-title" data-action="click->benefits-accordion#toggle"><%= benefit['title'] %></h4>
-          <div class="content-toggle" data-action="click->benefits-accordion#toggle">
-            <span class="plus-icon">+</span>
-          </div>
-          <div class="red-line"></div>
-          <div class="collapse">
-            <div class="content-expanded">
-              <p><%= benefit['description'] %></p>
+<% if @category.description %>
+  <section class="category-content-section py-5">
+    <div class="container">
+      <h3>
+        <%= @category.description %>
+      </h3>
+    </div>
+  </section>
+<% end %>
+
+<% if @category.benefits.any? %>
+  <!-- Section 2: Flex Grid Content Section -->
+  <section class="category-content-section py-5">
+    <div class="container">
+      <div class="content-grid" data-controller="benefits-accordion">
+        <% @category.benefits.each_with_index do |benefit, index| %>
+          <!-- Content Item <%= index + 1 %> -->
+          <div class="content-item" data-benefits-accordion-target="item">
+            <h4 class="content-title" data-action="click->benefits-accordion#toggle"><%= benefit['title'] %></h4>
+            <div class="content-toggle" data-action="click->benefits-accordion#toggle">
+              <span class="plus-icon">+</span>
+            </div>
+            <div class="red-line"></div>
+            <div class="collapse">
+              <div class="content-expanded">
+                <p><%= benefit['description'] %></p>
+              </div>
             </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+<% end %>
 
 <!-- Section 3: Subcategory Details Section -->
 <section class="subcategory-details-section py-5">
