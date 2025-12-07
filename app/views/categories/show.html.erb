@@ -74,11 +74,14 @@
               <div class="col-12 col-md-4">
                 <div class="subcategory-content">
                   <h3 class="subcategory-name"><%= subcategory.name %></h3>
-                  <p class="subcategory-description">
-                    <%= subcategory.description.present? ? subcategory.description : "High-quality #{subcategory.name.downcase} designed for performance and durability." %>
-                  </p>
+                  <% if subcategory.description %>
+                    <p class="subcategory-description">
+                      <%= subcategory.description %>
+                      <%#= subcategory.description.present? ? subcategory.description : "High-quality #{subcategory.name.downcase} designed for performance and durability." %>
+                    </p>
+                  <% end %>
                   <div class="subcategory-action">
-                    <%= link_to "SHOP NOW", category_path(name: subcategory.name), class: "btn btn-subcategory-shop" %>
+                    <%= link_to "SHOP NOW", category_path(identifier: subcategory.identifier), class: "btn btn-subcategory-shop" %>
                   </div>
                 </div>
               </div>

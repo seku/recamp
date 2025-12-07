@@ -39,6 +39,7 @@ namespace :categories do
       categories_array.each do |category_data|
         name = category_data['name']
         identifier = category_data['identifier']
+        description = category_data['description']
         benefits = category_data['benefits'] || []
         subcategories = category_data['subcategories'] || []
 
@@ -47,6 +48,7 @@ namespace :categories do
           name: name,
           identifier: identifier,
           active: true,
+          description: description,
           parent_id: nil
         )
         benefits.each do |benefit|
@@ -60,12 +62,7 @@ namespace :categories do
           subcategory_name = subcategory_data['name']
           subcategory_desc = subcategory_data['desc']
           subcategory_position = subcategory_data['position']
-
-          # Create identifier for subcategory based on name
-          subcategory_identifier = subcategory_name.downcase
-                                                  .gsub(/[^a-z0-9\s]/, '')
-                                                  .gsub(/\s+/, '_')
-                                                  .strip
+          subcategory_identifier = subcategory_data['identifier']
 
           subcategory = Category.create!(
             name: subcategory_name,
@@ -75,7 +72,7 @@ namespace :categories do
             position: subcategory_position,
             description: subcategory_desc
           )
-          subcategory.benefits.create!(title:'Description', description: subcategory_desc)
+          # subcategory.benefits.create!(title: 'Description', description: subcategory_desc)
 
           puts "  └── Created subcategory: #{subcategory.name} (#{subcategory.identifier})"
         end

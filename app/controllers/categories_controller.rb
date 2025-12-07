@@ -4,13 +4,13 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find_by(name: params[:name])
-    
+    @category = Category.find_by(identifier: params[:identifier])
+
     if @category.nil?
       redirect_to categories_path, alert: "Category not found"
       return
     end
-    
+
     @subcategories = @category.children.active.ordered_by_position
     @breadcrumb_path = @category.ancestors.reverse + [@category]
   end

@@ -11,15 +11,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "categories#index"
-  
+
   # Categories routes
   get 'categories', to: 'categories#index'
-  get 'categories/:name', to: 'categories#show', as: 'category'
-  
+  get 'categories/:identifier', to: 'categories#show', as: 'category'
+
   # Named routes for navigation
   get 'products', to: 'categories#index'
   get 'harley', to: 'categories#index'
-  get 'shop', to: 'categories#index'  
+  get 'shop', to: 'categories#index'
   get 'contact', to: 'categories#index'
   namespace :admin do
     resources :categories

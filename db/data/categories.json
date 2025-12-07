@@ -305,7 +305,7 @@
         },
         {
           "name": "For Harley",
-          "identifier": "for_harley",
+          "identifier": "for_harley_windscreens",
           "position": "3",
           "desc": "In various heights and shapes to fit different Harley models."
         },
@@ -348,7 +348,106 @@
       "name": "For Harley",
       "identifier": "for_harley",
       "position": "9",
-      "benefits": []
+      "benefits": [],
+      "description": "High-quality replacement parts and accessories for Harley-Davidson, designed to meet OEM standards, deliver years of reliable use and enhance both safety and riding pleasure",
+      "subcategories": [
+        {
+          "name": "Windscreens & deflectors",
+          "identifier": "windscreens_deflectors",
+          "position": "1",
+          "desc": null
+        },
+        {
+          "name": "Fairing and accessories",
+          "identifier": "fairing_and_accessories",
+          "position": "2",
+          "desc": null
+        },
+        {
+          "name": "Saddlebags & brackets",
+          "identifier": "saddlebags_brackets",
+          "position": "3",
+          "desc": null
+        },
+        {
+          "name": "Top cases and racks",
+          "identifier": "top_cases_and_racks",
+          "position": "4",
+          "desc": null
+        },
+        {
+          "name": "Backrest and luggage racks",
+          "identifier": "backrest_and_luggage_racks",
+          "position": "5",
+          "desc": null
+        },
+        {
+          "name": "Docking kits",
+          "identifier": "docking_kits",
+          "position": "6",
+          "desc": null
+        },
+        {
+          "name": "Handlebars & cables",
+          "identifier": "handlebars_cables",
+          "position": "7",
+          "desc": null
+        },
+        {
+          "name": "Grips",
+          "identifier": "grips",
+          "position": "8",
+          "desc": null
+        },
+        {
+          "name": "Clutch / brake levers",
+          "identifier": "clutch_brake_levers",
+          "position": "9",
+          "desc": null
+        },
+        {
+          "name": "Engine bars",
+          "identifier": "engine_bars",
+          "position": "10",
+          "desc": null
+        },
+        {
+          "name": "Lowering kits",
+          "identifier": "lowering_kits",
+          "position": "11",
+          "desc": null
+        },
+        {
+          "name": "Radiators",
+          "identifier": "radiators",
+          "position": "12",
+          "desc": null
+        },
+        {
+          "name": "Decorations",
+          "identifier": "decorations",
+          "position": "13",
+          "desc": null
+        },
+        {
+          "name": "Seats",
+          "identifier": "seats",
+          "position": "14",
+          "desc": null
+        },
+        {
+          "name": "Voltage Regulator",
+          "identifier": "voltage_regulator",
+          "position": "15",
+          "desc": null
+        },
+        {
+          "name": "Footpegs & accessories",
+          "identifier": "footpegs_accessories",
+          "position": "16",
+          "desc": null
+        }
+      ]
     }
   ]
 }
