@@ -1,37 +1,22 @@
 module ApplicationHelper
-  def category_hero_image_url(category)
-    return nil unless category&.identifier.present?
-
-    image_path = category.main_image_path
-    return nil unless image_path.present?
-
-    begin
-      # Check if the image exists in the file system (Propshaft)
-      if File.exist?(Rails.root.join('app', 'assets', 'images', image_path))
-        asset_path(image_path)
-      else
-        nil
-      end
-    rescue
-      nil
-    end
+  def responsive_image_tag(base_path, widths:, **options)
+    image_tag(
+      "#{base_path}-#{widths.max}.avif",
+      {
+        srcset: responsive_image_srcset(base_path, widths: widths),
+        sizes: "100vw"
+      }.merge(options)
+    )
   end
 
-  def subcategory_image_url(subcategory)
-    return nil unless subcategory&.parent&.identifier.present? && subcategory.position.present?
+  def responsive_image_srcset(base_path, widths:)
+    widths.filter_map do |width|
+      path = "#{base_path}-#{width}.avif"
+      full_path = Rails.root.join("app/assets/images", path)
 
-    image_path = subcategory.subcategory_image_path
-    return nil unless image_path.present?
+      next unless File.exist?(full_path)
 
-    begin
-      # Check if the image exists in the file system (Propshaft)
-      if File.exist?(Rails.root.join('app', 'assets', 'images', image_path))
-        asset_path(image_path)
-      else
-        nil
-      end
-    rescue
-      nil
-    end
+      "#{asset_path(path)} #{width}w"
+    end.join(", ")
   end
 end

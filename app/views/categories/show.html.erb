@@ -2,7 +2,11 @@
 
 <!-- Section 1: Hero Section -->
 <section class="category-hero-section position-relative">
-  <%= image_tag category_hero_image_url(@category), alt: @category.name, class: "category-hero-image w-100 h-100" %>
+  <%= responsive_image_tag(
+    @category.main_image_path,
+    widths: [480, 768, 1024, 1440, 1920],
+    class: "category-hero-image w-100 h-100"
+  ) %>
   <div class="container-fluid h-100 position-relative">
     <div class="row h-100">
       <div class="col-12 d-flex flex-column justify-content-center align-items-center text-center">
@@ -87,11 +91,13 @@
               </div>
               <div class="col-12 col-md-8">
                 <div class="subcategory-image position-relative">
-                  <% subcategory_image_url = subcategory_image_url(subcategory) %>
+                  <% subcategory_image_url = @category.subcategory_image_path(subcategory.position) %>
                   <% if subcategory_image_url %>
-                    <img src="<%= subcategory_image_url %>"
-                          alt="<%= subcategory.name %>"
-                          class="img-fluid w-100 h-100">
+                    <%= responsive_image_tag(
+                      subcategory_image_url,
+                      widths: [480, 768],
+                      class: "img-fluid w-100 h-100"
+                    ) %>
                   <% else %>
                     <div class="subcategory-image-placeholder bg-light d-flex align-items-center justify-content-center w-100 h-100">
                       <i class="fas fa-cog fa-3x text-muted"></i>

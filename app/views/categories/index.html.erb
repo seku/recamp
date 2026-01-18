@@ -17,10 +17,12 @@
               <div class="category-image-container mb-3">
                 <div class="category-image-wrapper">
                   <% if category.identifier.present? %>
-                    <%= image_tag category.home_image_path,
-                        alt: category.name,
-                        class: "category-image img-fluid",
-                        onerror: "this.style.display='none'; this.nextElementSibling.style.display='flex';" %>
+                    <%= responsive_image_tag(
+                      category.home_image_path,
+                      widths: [480],
+                      class: "category-image img-fluid",
+                      onerror: "this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                    ) %>
                     <div class="category-image-fallback bg-light d-flex align-items-center justify-content-center" style="display: none;">
                       <i class="fas fa-image fa-3x text-muted"></i>
                     </div>
