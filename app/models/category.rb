@@ -51,9 +51,13 @@ class Category < ApplicationRecord
 
 
   def subcategory_image_path(subcategory_position)
-    path = "categories/#{identifier}/#{subcategory_position}"
-    pattern = Rails.root.join("app/assets/images", "#{path}-*.*")
+    # version in case not every subcategory has image
+    # but DIr.glob is slow should be replaced by caching
+    # path = "categories/#{identifier}/#{subcategory_position}"
+    # pattern = Rails.root.join("app/assets/images", "#{path}-*.*")
 
-    Dir.glob(pattern).any? ? path : nil
+    # Dir.glob(pattern).any? ? path : nil
+    #
+    "categories/#{identifier}/#{subcategory_position}"
   end
 end
